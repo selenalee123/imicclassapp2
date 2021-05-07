@@ -1,4 +1,4 @@
-﻿import { useCallbacks, useContext } from 'react';
+﻿import { useCallback, useContext } from 'react';
 import { ThemeContext, Theme, defaultTheme } from '../contexts/ThemeProvider';
 
 export const BlackTheme: Theme = {
@@ -15,5 +15,6 @@ export default function useThem() {
         [themeContext],
     );
     const setBlackTheme = useCallback(
-        () => themeContext?.setTheme?.(BlackTheme))
+        () => themeContext?.setTheme?.(BlackTheme),[themeContext],)
+        return {themeContext, currentTheme,setDefaultTheme,setBlackTheme};
 }

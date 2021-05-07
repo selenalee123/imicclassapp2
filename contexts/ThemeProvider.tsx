@@ -7,9 +7,9 @@ export type Theme = {
 };
 
 const defaultTheme: Theme = {
-  textColor: 'red',
+  textColor: 'white',
   buttonColor: 'green',
-  primaryColor: '#fff',
+  primaryColor: 'white',
 };
 
 type ThemeContextType = {

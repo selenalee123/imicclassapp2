@@ -11,6 +11,8 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeScreen } from './../screens/HomeScreen';
 import { MovieScreenRanking } from './../screens/MovieScreenRanking';
 import  {MoviePopular}  from './../screens/MoviePopular';
+import {CounterScreenRedux}from '../screens/Counter/CounterScreenRedux'
+
 
 
 
@@ -23,13 +25,7 @@ function NotificationScreen() {
   );
 }
 
-function SettingsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Settings!</Text>
-    </View>
-  );
-}
+
 
 const Tab = createBottomTabNavigator<MainStackParamList>();
 const styles = StyleSheet.create({
@@ -57,7 +53,7 @@ export default function BottomTabNavigator() {
             iconName = focused
               ? 'notifications-outline'
               : 'notifications-outline';
-          } else if (route.name === 'Settings') {
+          } else if (route.name === 'CounterScreenRedux') {
             iconName = focused ? 'settings-outline' : 'settings';
           } else if (route.name === 'Home') {
             iconName = focused ? 'home' : 'home'
@@ -78,7 +74,7 @@ export default function BottomTabNavigator() {
       }}
     >
       <Tab.Screen name="Home" component={HomeScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="CounterScreenRedux" component={CounterScreenRedux} />
       <Tab.Screen name="Notification" component={NotificationScreen} />
       <Tab.Screen name="MovieRanking" component={MovieScreenRanking} />
       <Tab.Screen name="MoviePopular" component={MoviePopular} />
