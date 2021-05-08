@@ -329,17 +329,24 @@
 
 import 'react-native-gesture-handler';
 import React from 'react';
-import {AuthUserProvider} from './contexts/AuthUserProvider';
-import {ThemeProvider} from './contexts/ThemeProvider';
-import {AppStack} from './stacks/RootNavigation';
+import { AuthUserProvider } from './contexts/AuthUserProvider';
+import { ThemeProvider } from './contexts/ThemeProvider';
+import { CountProvider } from './contexts/CountProvider';
+import { Provider } from 'react-redux'
+import { AppStack } from './stacks/RootNavigation';
 import BottomTabNavigator from './stacks/BottomTabNavigator';
+import store from './redux/store';
 
 const App = () => {
   return (
     <ThemeProvider>
-      <AuthUserProvider>
-        <AppStack />
-      </AuthUserProvider>
+      <CountProvider>
+        <Provider store={store}>
+          <AuthUserProvider>
+            <AppStack />
+          </AuthUserProvider>
+        </Provider>
+      </CountProvider>
     </ThemeProvider>
   );
 };

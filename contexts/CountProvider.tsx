@@ -1,5 +1,5 @@
 ﻿import React, {PropsWithChildren, useMemo, useState} from 'react';
-
+import {useCounter} from '../hooks/useCounter';
 type CountContextType = {
   count: number;
   incrementCounter?: () => void;

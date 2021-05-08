@@ -11,19 +11,14 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import { HomeScreen } from './../screens/HomeScreen';
 import { MovieScreenRanking } from './../screens/MovieScreenRanking';
 import  {MoviePopular}  from './../screens/MoviePopular';
+import  {NotificationScreen}  from './../screens/NotificationScreen';
+import  {MovieScreenRedux}  from './../screens/MovieRedux/MovieScreenRedux';
+
+
 import {CounterScreenRedux}from '../screens/Counter/CounterScreenRedux'
 
 
 
-
-
-function NotificationScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Notification!</Text>
-    </View>
-  );
-}
 
 
 
@@ -78,6 +73,8 @@ export default function BottomTabNavigator() {
       <Tab.Screen name="Notification" component={NotificationScreen} />
       <Tab.Screen name="MovieRanking" component={MovieScreenRanking} />
       <Tab.Screen name="MoviePopular" component={MoviePopular} />
+      <Tab.Screen name="MovieScreenRedux" component={MovieScreenRedux} />
+
 
 
 

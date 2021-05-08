@@ -30,18 +30,5 @@ const MainStack = () => {
 };
 export default MainStack;
 
-// const Tab = createMaterialBottomTabNavigator();
-
-// const BottomTabNavigator =() => {
-//   return (
-//     <Tab.Navigator  initialRouteName="Notification">
-//       <Tab.Screen name="Notification" component={NotificationScreen} />
-//       <Tab.Screen name="Settings" component={SettingsScreen}/>
-//     </Tab.Navigator>
-//   );
-// }
-
-// export default BottomTabNavigator;
-
 
 

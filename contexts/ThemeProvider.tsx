@@ -7,7 +7,7 @@ export type Theme = {
 };
 
 const defaultTheme: Theme = {
-  textColor: 'white',
+  textColor: 'black',
   buttonColor: 'green',
   primaryColor: 'white',
 };
