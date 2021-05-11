@@ -12,7 +12,7 @@ import { HomeScreen } from './../screens/HomeScreen';
 import { MovieScreenRanking } from './../screens/MovieScreenRanking';
 import  {MoviePopular}  from './../screens/MoviePopular';
 import  {NotificationScreen}  from './../screens/NotificationScreen';
-import  {MovieScreenRedux}  from './../screens/MovieRedux/MovieScreenRedux';
+import  MovieScreenRedux  from './../screens/MovieRedux/MovieScreenRedux';
 
 
 import {CounterScreenRedux}from '../screens/Counter/CounterScreenRedux'

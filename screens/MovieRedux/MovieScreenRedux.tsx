@@ -6,41 +6,34 @@ import {fetchMovies} from '../../redux/movieSlice';
 import {AppDispatch, RootState} from '../../redux/store';
 import {MainStackScreenProps} from '../../stacks/Navigation';
 import MovieScreenList from './MovieScreenList';
-
-
-interface Props {
-
-}
-
 const MovieScreenRedux: React.FC<MainStackScreenProps<'MovieRedux'>> = ({
-    navigation,
-  }) => {
-    const dispatch: AppDispatch = useDispatch();
-    const {movies, isFetching} = useSelector((state: RootState) => state?.movie);
-  
-    useEffect(() => {
-        dispatch(fetchMovies());
-      }, [dispatch]);
-    
-      const onMovieItemPress = useCallback(
-        (item: Movie) => {
-          navigation.navigate('MovieDetailRedux', {id: item.id});
-        },
-        [navigation],
-      );
-    
-      return (
-        <MovieScreenList
-          onPress={onMovieItemPress}
-          isFetching={isFetching}
-          movies={movies}
-        />
-      );
-    };
-    export const styles = StyleSheet.create({
-      container: {
-        flex: 1,
-      },
-    });
-    export default MovieScreenRedux;
-    
+  navigation,
+}) => {
+  const dispatch: AppDispatch = useDispatch();
+  const {movies, isFetching} = useSelector((state: RootState) => state?.movies);
+
+  useEffect(() => {
+    dispatch(fetchMovies());
+  }, [dispatch]);
+
+  const onMovieItemPress = useCallback(
+    (item: Movie) => {
+      navigation.navigate('MovieDetailRedux', {id: item.id});
+    },
+    [navigation],
+  );
+
+  return (
+    <MovieScreenList
+      onPress={onMovieItemPress}
+      isFetching={isFetching}
+      movies={movies}
+    />
+  );
+};
+export const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+});
+export default MovieScreenRedux;
